@@ -31,7 +31,7 @@ namespace ObsidianCanvas.Data
 		}
 
 		/// <summary>
-		/// Returns a color, but will return a value. The Color value you can access directly is nullable, so may not.
+		/// Returns an edge color, but will return a value. The Color value you can access directly is nullable, so may not.
 		/// </summary>
 		/// <param name="fallbackColor">(optional) Color to return if color is null. If not set, will be default</param>
 		public Color GetColor(Color fallbackColor = default)

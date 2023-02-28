@@ -13,6 +13,8 @@ public class CanvasImporter : ScriptedImporter
 {
 	[Tooltip("Handle the following file nodes as TExtAssets in unity. Must be all lowercase. This list must include .md in order for regular obsidian text files to be treated as TextAssets.")]
 	public string[] textAssetExtensions = new[] { ".md",".markdown" };
+
+	public Color defaultNodeColor;
 	public override void OnImportAsset(AssetImportContext ctx)
 	{
 		var canvasObject = ScriptableObject.CreateInstance<CanvasObject>();
@@ -67,7 +69,7 @@ public class CanvasImporter : ScriptedImporter
 
 	private ObsidianCanvas.Data.Node CreateDataNodeFromJSONDataNode(AssetImportContext ctx,ObsidianCanvas.JSONTypes.Node node)
     {
-        ObsidianCanvas.Data.Node n = new ObsidianCanvas.Data.Node(node);
+        ObsidianCanvas.Data.Node n = new ObsidianCanvas.Data.Node(node,defaultNodeColor);
 
     	//Create appropriate subclasses from the single JSON deserialized object type.
     	if (node.type == "text")
@@ -125,7 +127,6 @@ public class CanvasImporter : ScriptedImporter
 		            //if it's a canvas file, which we already should have handled, but this one hasn't been imported yet? because we are importing multiple at the same time?? that reference each other??? What order do they import in?..... wait how do we like, fix this properly? uhh
 		            var cn = new CanvasNode(filePathAsProjectPath, n);
 		            cn.Asset = AssetDatabase.LoadAssetAtPath<CanvasObject>(filePathAsProjectPath);
-		            Debug.Log(filePathAsProjectPath);
 		            return cn;
 	            }
 	            //else...

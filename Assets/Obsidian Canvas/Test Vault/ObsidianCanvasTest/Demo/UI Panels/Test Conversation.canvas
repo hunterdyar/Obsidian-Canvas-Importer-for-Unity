@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"type":"text","text":"Hello! What are you going to do today?","id":"826eda5602742523","x":-460,"y":-280,"width":250,"height":60},
+		{"type":"text","text":"You can dance if you want to.","id":"8ddd99d050e28f8e","x":0,"y":-280,"width":250,"height":60},
+		{"type":"text","text":"Okay.","id":"1fd0eea446285e62","x":40,"y":-100,"width":250,"height":60},
+		{"type":"text","text":"I am sorry to hear that.","id":"238db1417e4e9c21","x":-180,"y":60,"width":250,"height":60},
+		{"type":"text","text":"I concure.","id":"0bb1cc93db149921","x":590,"y":-480,"width":250,"height":60},
+		{"type":"text","text":"Uh, okay. I think that's fine too.","id":"3bb995b3c655dfd1","x":590,"y":-180,"width":250,"height":50}
+	],
+	"edges":[
+		{"id":"0dfbb6f6541c5a42","fromNode":"826eda5602742523","fromSide":"right","toNode":"238db1417e4e9c21","toSide":"left","label":"Cry"},
+		{"id":"9209b70ff59ebe45","fromNode":"826eda5602742523","fromSide":"right","toNode":"1fd0eea446285e62","toSide":"left","label":"Nothing"},
+		{"id":"0da42e2ac99d4d0a","fromNode":"8ddd99d050e28f8e","fromSide":"right","toNode":"0bb1cc93db149921","toSide":"left","label":"You can leave your friends behind"},
+		{"id":"811cc49522807d79","fromNode":"8ddd99d050e28f8e","fromSide":"right","toNode":"3bb995b3c655dfd1","toSide":"left","label":"Maybe I'll stop dancing"},
+		{"id":"12484e8895eef18c","fromNode":"826eda5602742523","fromSide":"right","toNode":"8ddd99d050e28f8e","toSide":"left","label":"Dance"}
+	]
+}

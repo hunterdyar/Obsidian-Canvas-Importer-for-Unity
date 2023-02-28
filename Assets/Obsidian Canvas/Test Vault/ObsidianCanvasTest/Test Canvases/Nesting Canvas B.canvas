@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"type":"text","text":"This canvas references A","id":"af7e8d0bed01a5c1","x":-134,"y":-145,"width":250,"height":60},
+		{"type":"file","file":"Test Canvases/Nesting Canvas A.canvas","id":"e7ab471452368af2","x":-340,"y":20,"width":400,"height":498},
+		{"type":"file","file":"Regular Files/Hello There.md","id":"ffff7ce7ffaf43bc","x":192,"y":32,"width":400,"height":400},
+		{"type":"file","file":"Regular Files/agent86.jpg","id":"e2186a26fcbd4508","x":240,"y":-478,"width":400,"height":363}
+	],
+	"edges":[
+		{"id":"52961fe910ebbb45","fromNode":"af7e8d0bed01a5c1","fromSide":"bottom","toNode":"e7ab471452368af2","toSide":"top"},
+		{"id":"32a1bae88409880d","fromNode":"af7e8d0bed01a5c1","fromSide":"bottom","toNode":"ffff7ce7ffaf43bc","toSide":"top"},
+		{"id":"6211d672fd1b62ae","fromNode":"af7e8d0bed01a5c1","fromSide":"right","toNode":"e2186a26fcbd4508","toSide":"left"}
+	]
+}

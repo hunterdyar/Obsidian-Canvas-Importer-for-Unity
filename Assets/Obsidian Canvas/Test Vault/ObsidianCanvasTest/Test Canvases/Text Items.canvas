@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"type":"text","text":"Text Item 1","id":"c998aaafee95de64","x":-205,"y":-280,"width":250,"height":60},
+		{"type":"text","text":"Text Item 2","id":"e3492fbef2bf5d32","x":-280,"y":-141,"width":250,"height":61},
+		{"type":"text","text":"Another Thing","id":"b163aa3916f8fb41","x":20,"y":-130,"width":250,"height":50},
+		{"type":"text","text":"Thing 4","id":"09a48ee6bf47d097","x":-197,"y":15,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"80945a963495d521","fromNode":"c998aaafee95de64","fromSide":"bottom","toNode":"e3492fbef2bf5d32","toSide":"top","label":"Two"},
+		{"id":"db5516f7c51bc81a","fromNode":"c998aaafee95de64","fromSide":"bottom","toNode":"b163aa3916f8fb41","toSide":"top","label":"One"},
+		{"id":"1059835cfc9385d5","fromNode":"e3492fbef2bf5d32","fromSide":"bottom","toNode":"09a48ee6bf47d097","toSide":"top","label":"Three"},
+		{"id":"540abd13d3631ac4","fromNode":"b163aa3916f8fb41","fromSide":"bottom","toNode":"09a48ee6bf47d097","toSide":"top","label":"Three"}
+	]
+}

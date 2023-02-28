@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "5c7e71733a54710c",
+    "type": "split",
+    "children": [
+      {
+        "id": "93cdceb024336265",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "528442158cc9773b",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Demo/UI Panels/Test Conversation.canvas",
+                "viewState": {
+                  "x": 190,
+                  "y": -180,
+                  "zoom": -0.288274071164537
+                }
+              }
+            }
+          },
+          {
+            "id": "3c2baee448b7542d",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Test Canvases/Group Test Canvas.canvas",
+                "viewState": {
+                  "x": -155.22849020715586,
+                  "y": 169.51505588908208,
+                  "zoom": -0.3333333333333334
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "72361b63044ac02b",
+    "type": "split",
+    "children": [
+      {
+        "id": "d68f7f3802214249",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b04c1995893aafbb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9330ed39087db92f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3d14bc7d12688317",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3aa5c133d7be7835",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f492b3394c69805",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14356c7cd20199a0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Demo/UI Panels/Test Conversation.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c7e0bba6f7daa296",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Demo/UI Panels/Test Conversation.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5f3e79c74ea6d1e9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e984799e90be4dba",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Demo/UI Panels/Test Conversation.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "528442158cc9773b",
+  "lastOpenFiles": [
+    "Test Canvases/Nesting Canvas B.canvas",
+    "Demo/UI Panels/Test Conversation.canvas",
+    "Test Canvases/Text Items.canvas",
+    "Test Canvases/mdFile Items Test.canvas",
+    "Test Canvases/Group Test Canvas.canvas",
+    "Test Canvases/Nesting Canvas A.canvas.meta",
+    "Demo/UI Panels.meta",
+    "Demo/UI Panels/Test Conversation.canvas.meta",
+    "Test Canvases/Nesting Canvas B.canvas.meta",
+    "Test Canvases/mdFile Items Test.canvas.meta",
+    "Demo.meta",
+    "Test Canvases/Group Test Canvas.canvas.meta",
+    "Test Canvases/Text Items.canvas.meta",
+    "Test Canvases.meta",
+    "Regular Files/Hello There.md",
+    "Demo/UI Panels",
+    "Regular Files/agent86.jpg",
+    "Test Canvases/Nesting Canvas A.canvas",
+    "Text Items.json.canvas"
+  ]
+}

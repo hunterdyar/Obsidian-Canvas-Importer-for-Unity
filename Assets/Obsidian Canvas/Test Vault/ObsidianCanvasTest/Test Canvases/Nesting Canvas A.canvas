@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"type":"text","text":"Regular Node","id":"21c8f864c05e2581","x":-240,"y":-420,"width":250,"height":60},
+		{"id":"6bdfb410e9974748","x":-172,"y":-193,"width":400,"height":400,"type":"file","file":"Test Canvases/Nesting Canvas B.canvas"},
+		{"id":"ea414780460c0466","x":-460,"y":-160,"width":250,"height":60,"type":"text","text":"Test"}
+	],
+	"edges":[
+		{"id":"7c0db21594abb1c1","fromNode":"21c8f864c05e2581","fromSide":"bottom","toNode":"6bdfb410e9974748","toSide":"top"},
+		{"id":"437f1001cff6281f","fromNode":"21c8f864c05e2581","fromSide":"bottom","toNode":"ea414780460c0466","toSide":"top"}
+	]
+}

@@ -22,7 +22,9 @@ There is a root "AssetNode<T>" that encapsulates the "file" reference logic. Cur
 
 ## Why?
 
-I don't really know. There isn't (yet!) a way to add more JSON fields within Canvas, which means making the information useful for game development isn't quite there yet. That being said, I could write a plugin for obsidian that does serialize some kind of data into the JSON .canvas file and... and then were getting somewhere useful!
+I don't know. There isn't (yet!) a way to add more JSON fields within Canvas, which means making the information useful for game development isn't quite there yet. That being said, I could write a plugin for obsidian that does serialize some kind of data into the JSON .canvas file and... and then were getting somewhere useful!
+
+> To be fair, if we are at the point we are writing custom Obsidian extensions... we should probably just extend the node systems that are built into Unity. So why did I make this again? 
 
 I wouldn't use this for a dialogue system - labeling the edges in canvas is awkward UI. But I would use this for a higher-level node network or quest system, and then use https://www.inklestudios.com/ink/. Each conversation is a file, and could be saved inside the obsidian vault right inside the assets directory.
 

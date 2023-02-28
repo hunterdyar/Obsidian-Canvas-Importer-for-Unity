@@ -17,7 +17,8 @@ public class MarkdownImporter : ScriptedImporter
 	public override void OnImportAsset(AssetImportContext ctx)
 	{
 		var markdownObject = ScriptableObject.CreateInstance<MarkdownObject>();
-		markdownObject.name = Path.GetFileNameWithoutExtension(ctx.assetPath) + " obj";
+		var assetName = Path.GetFileNameWithoutExtension(ctx.assetPath);
+		markdownObject.name = assetName + " obj";
 		
 		//parse the text file.
 
@@ -25,8 +26,13 @@ public class MarkdownImporter : ScriptedImporter
 		//Create the frontmatter object
 		//Type markdownImportType = Type.GetType(selectedTypeName);//doesnt work?
 		var markdownImportType = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).First(p => typeof(IFrontmatter).IsAssignableFrom(p) && p.Name == selectedTypeName);
-		
-		markdownObject.Init(markdownImportType,data.Item1,data.Item2);
+
+		//create textAsset for just the body text.
+
+		var bodyAsset = new TextAsset(data.Item2);
+		markdownObject.Init(markdownImportType,data.Item1,bodyAsset);
+		ctx.AddObjectToAsset(assetName+" body",bodyAsset);
+		bodyAsset.name = assetName + " body";
 		EditorUtility.SetDirty(markdownObject);
 		ctx.AddObjectToAsset("Canvas Object", markdownObject);
 		ctx.SetMainObject(markdownObject);

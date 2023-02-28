@@ -17,8 +17,8 @@ namespace ObsidianCanvas.MarkdownData
 		
 		[TextArea(10,20)]
 		public string frontmatterText;
-		
-		[TextArea(10, 30)] public string body;
+
+		public TextAsset body;
 		public void ParseFrontmatter(Type frontType, string front)
 		{
 			frontmatterText = front;
@@ -30,7 +30,7 @@ namespace ObsidianCanvas.MarkdownData
 			frontmatter = method?.Invoke(this, new object[] { front });
 		}
 
-		public void Init(Type frontType, string front, string body)
+		public void Init(Type frontType, string front, TextAsset body)
 		{
 			ParseFrontmatter(frontType,front);
 			this.body = body;

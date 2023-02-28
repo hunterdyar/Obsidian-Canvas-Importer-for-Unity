@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Reflection;
+using ObsidianCanvas.Frontmatter;
 using UnityEditor;
 using UnityEngine;
+using YAMLUtility;
 
 namespace ObsidianCanvas.MarkdownData
 {
@@ -8,23 +11,29 @@ namespace ObsidianCanvas.MarkdownData
 	{
 		//Currently there is no advantage to using this importer.
 		//but... frontmatter support into objects!
-		
-		[TextArea(10,30)]
-		public string text;
 
-		public void ParseFrontmatter()
+		[SerializeReference]
+		public object frontmatter;
+		
+		[TextArea(10,20)]
+		public string frontmatterText;
+		
+		[TextArea(10, 30)] public string body;
+		public void ParseFrontmatter(Type frontType, string front)
 		{
-			//step 1: find frontmatter
-				//split by end-line, search for "---" or ... lines that have at least, but any number of, dashes?
-			//step 2: parse as YAML using https://github.com/aaubry/YamlDotNet
-			//MarkdownObject<T> where T is what we try to parse front-matter into, the rest is markdown.
-			
-			//Step 3: markdown to textMeshPro-compatible rtf using some converter.
+			frontmatterText = front;
+			//lol this is so gross. we're just throwing type safety out the window.
+			//but like... yeah. Kind of the point?
+			MethodInfo method = typeof(SimpleFrontmatterParse).GetMethod("FromYAML");
+			method = method.MakeGenericMethod(new Type[] { frontType });
+
+			frontmatter = method?.Invoke(this, new object[] { front });
 		}
 
-		public void SetText(string text)
+		public void Init(Type frontType, string front, string body)
 		{
-			this.text = text;
+			ParseFrontmatter(frontType,front);
+			this.body = body;
 		}
 	}
 

@@ -26,14 +26,11 @@
             "id": "8bd6187e0dcbf982",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Test Canvases/Nesting Canvas B.canvas",
-                "viewState": {
-                  "x": 150,
-                  "y": 20,
-                  "zoom": -0.317786100674612
-                }
+                "file": "Regular Files/Test.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -119,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Test Canvases/Nesting Canvas B.canvas",
+                "file": "Regular Files/Test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Test Canvases/Nesting Canvas B.canvas",
+                "file": "Regular Files/Test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test Canvases/Nesting Canvas B.canvas"
+                "file": "Regular Files/Test.md"
               }
             }
           }
@@ -182,9 +179,10 @@
   },
   "active": "8bd6187e0dcbf982",
   "lastOpenFiles": [
+    "Regular Files/Hello There.md",
+    "Test Canvases/Nesting Canvas B.canvas",
     "Regular Files/Test.md.meta",
     "Regular Files/Hello There.md.meta",
-    "Regular Files/Hello There.md",
     "Regular Files/agent86.jpg.meta",
     "Regular Files/agent86.jpg",
     "Test Canvases/Nesting Canvas A.canvas",
@@ -203,10 +201,8 @@
     "Regular Files/This is a note.md.meta",
     "Regular Files/Test.physicMaterial.meta",
     "Regular Files/Test.physicMaterial",
-    "Test Canvases/Test.physicMaterial.meta",
     "Demo/Convo/Test Conversation.canvas",
     "Test Canvases/Text Items.canvas",
-    "Test Canvases/Nesting Canvas B.canvas",
     "Demo/UI Panels/Test Conversation.canvas",
     "Text Items.json.canvas"
   ]

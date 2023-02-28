@@ -63,6 +63,7 @@ namespace Obsidian_Canvas.Example.Conversation
 
 		private void CreateButtonsForNode(TextNode node)
 		{
+			//todo: sort node.Connections by node y position. Do it with a linq statement that also filters out arrow ports (incoming) 
 			foreach (var port in node.Connections)
 			{
 				//only the "outgoing" nodes should be displayed as options.

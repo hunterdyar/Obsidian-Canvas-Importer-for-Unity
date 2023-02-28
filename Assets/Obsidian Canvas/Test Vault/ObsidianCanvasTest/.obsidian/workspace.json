@@ -13,11 +13,26 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Test Canvases/Group Test Canvas.canvas",
+                "file": "Test Canvases/Nesting Canvas A.canvas",
                 "viewState": {
-                  "x": -391.2579007145586,
-                  "y": 451.53720869816703,
-                  "zoom": -1.519562266378518
+                  "x": -116,
+                  "y": -106.5,
+                  "zoom": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "8bd6187e0dcbf982",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Test Canvases/Nesting Canvas B.canvas",
+                "viewState": {
+                  "x": 150,
+                  "y": 20,
+                  "zoom": -0.317786100674612
                 }
               }
             }
@@ -37,7 +52,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Test Canvases/Group Test Canvas.canvas",
+                "file": "Test Canvases/Nesting Canvas B.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Test Canvases/Group Test Canvas.canvas",
+                "file": "Test Canvases/Nesting Canvas B.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test Canvases/Group Test Canvas.canvas"
+                "file": "Test Canvases/Nesting Canvas B.canvas"
               }
             }
           }
@@ -164,28 +180,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "528442158cc9773b",
+  "active": "8bd6187e0dcbf982",
   "lastOpenFiles": [
-    "Demo/Convo.meta",
-    "Demo/Convo/Test Conversation.canvas.meta",
-    "Demo/Convo/Test Conversation.canvas",
-    "Demo/Convo",
-    "Test Canvases/Text Items.canvas",
-    "Test Canvases/Nesting Canvas B.canvas",
-    "Regular Files/Canvas Object.asset.meta",
-    "Regular Files/Canvas Object.asset",
+    "Regular Files/Test.md.meta",
+    "Regular Files/Hello There.md.meta",
+    "Regular Files/Hello There.md",
+    "Regular Files/agent86.jpg.meta",
+    "Regular Files/agent86.jpg",
     "Test Canvases/Nesting Canvas A.canvas",
     "Test Canvases/mdFile Items Test.canvas",
     "Test Canvases/Group Test Canvas.canvas",
+    "Regular Files/Test.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas.meta",
+    "Regular Files",
+    "Untitled.canvas",
+    "Regular Files/asdaasdasd.md",
+    "Regular Files/asdaasdasd.md.meta",
+    "Regular Files/Test Test.md",
+    "Regular Files/Test Test.md.meta",
+    "Regular Files/This is a note.md",
+    "Regular Files/This is a note.md.meta",
+    "Regular Files/Test.physicMaterial.meta",
+    "Regular Files/Test.physicMaterial",
+    "Test Canvases/Test.physicMaterial.meta",
+    "Demo/Convo/Test Conversation.canvas",
+    "Test Canvases/Text Items.canvas",
+    "Test Canvases/Nesting Canvas B.canvas",
     "Demo/UI Panels/Test Conversation.canvas",
-    "Test Canvases/Nesting Canvas A.canvas.meta",
-    "Demo/UI Panels.meta",
-    "Demo/UI Panels/Test Conversation.canvas.meta",
-    "Test Canvases/Nesting Canvas B.canvas.meta",
-    "Test Canvases/mdFile Items Test.canvas.meta",
-    "Demo.meta",
-    "Regular Files/Hello There.md",
-    "Regular Files/agent86.jpg",
     "Text Items.json.canvas"
   ]
 }

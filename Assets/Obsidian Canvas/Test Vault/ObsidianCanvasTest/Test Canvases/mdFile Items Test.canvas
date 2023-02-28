@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"type":"text","text":"This is a regular node\n","id":"50b547698624b53f","x":-40,"y":-234,"width":250,"height":60},
-		{"type":"file","file":"Regular Files/Hello There.md","id":"25842afd6d9304b5","x":-620,"y":-140,"width":400,"height":400}
+		{"type":"file","file":"Regular Files/Test.md","id":"25842afd6d9304b5","x":-620,"y":-140,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"debb8db9dcc1dbc5","fromNode":"50b547698624b53f","fromSide":"bottom","toNode":"25842afd6d9304b5","toSide":"top"}

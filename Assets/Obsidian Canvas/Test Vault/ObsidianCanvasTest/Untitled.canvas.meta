@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d8274869ea13f9648a1b796cc34272d9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 85331b7c5f0d443eb647344a8c31b4ff, type: 3}
+  textAssetExtensions:
+  - .md
+  - .markdown
+  defaultNodeColor: {r: 0, g: 0, b: 0, a: 0}

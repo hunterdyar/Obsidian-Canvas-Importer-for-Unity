@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using ObsidianCanvas.Data;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Node = ObsidianCanvas.Data.Node;
 
 namespace ObsidianCanvas
 {
-	[UnityEngine.CreateAssetMenu(fileName = "Canvas Object", menuName = "Obsidian/Canvas Object", order = 0)]
+	//I don't use [CreateAssetMenu] because I wrote the code assuming it's all deterministic from a file and won't be changed from runtime unless someone knows what theyre doing.
+	//For example, Connections have multiple sources of truth.
 	public class CanvasObject : ScriptableObject
 	{
-		[SerializeReference]
-		public List<Node> _nodes = new();
+		[FormerlySerializedAs("_nodes")] [SerializeReference]
+		public List<Node> nodes = new();
 
 		//used to convert the relative File paths from obsidian to project paths
 		//we can't ask the assetDatabase for our path yet... because we don't have one yet! This is during import.
@@ -19,7 +20,7 @@ namespace ObsidianCanvas
 		
 		public Node GetNode(string id)
 		{
-			return _nodes.Find(x => x.ID == id);
+			return nodes.Find(x => x.ID == id);
 		}
 
 		public void SetPath(string ctxAssetPath)
@@ -29,7 +30,7 @@ namespace ObsidianCanvas
 
 		public void Clear()
 		{
-			_nodes.Clear();
+			nodes.Clear();
 			// _edges.Clear();
 		}
 
@@ -37,7 +38,7 @@ namespace ObsidianCanvas
 		{
 			if (node != null)
 			{
-				_nodes.Add(node);
+				nodes.Add(node);
 			}
 		}
 		
@@ -72,9 +73,9 @@ namespace ObsidianCanvas
 		/// <returns></returns>
 		public List<Node> GetAllStartingNodes()
 		{
-			Debug.Log($"Searching for starting nodes. There are {_nodes.Count} total nodes.");
+			Debug.Log($"Searching for starting nodes. There are {nodes.Count} total nodes.");
 			var starting = new List<Node>();
-			foreach (var node in _nodes)
+			foreach (var node in nodes)
 			{
 				if (node.Connections.Count > 0)
 				{

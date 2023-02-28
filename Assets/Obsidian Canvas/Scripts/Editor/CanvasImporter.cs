@@ -19,12 +19,13 @@ public class CanvasImporter : ScriptedImporter
 		canvasObject.name = Path.GetFileNameWithoutExtension(ctx.assetPath)+" obj";
 		
 		ImportData(ctx,canvasObject,File.ReadAllText(ctx.assetPath));
+		
 		EditorUtility.SetDirty(canvasObject);
 		ctx.AddObjectToAsset("Canvas Object",canvasObject);
 		ctx.SetMainObject(canvasObject);
 		
 		//needed?
-		AssetDatabase.SaveAssets();
+		//AssetDatabase.SaveAssets();
 	}
 
 	private void ImportData(AssetImportContext ctx,CanvasObject canvasObject,string canvasText)
@@ -50,7 +51,7 @@ public class CanvasImporter : ScriptedImporter
 				canvasObject.AddNode(datNode);
 			}
 		}
-
+		//now that we have nodes, we can update them with edges.
 		foreach (var edge in canvasData.edges)
 		{
 			//Defaults are different. The default line is directional, from has none, to has arrow.
@@ -59,6 +60,9 @@ public class CanvasImporter : ScriptedImporter
 			
 			canvasObject.ConnectNodes(edge.fromNode, GetNodePortSide(edge.fromSide), fromEnd, GetNodePortSide(edge.toSide), edge.toNode, toEnd,edge.color,edge.label);
 		}
+		
+		//also after nodes, we can figure out what groups are what.
+		UpdateGroupNodes(canvasObject);
 	}
 
 	private ObsidianCanvas.Data.Node CreateDataNodeFromJSONDataNode(AssetImportContext ctx,ObsidianCanvas.JSONTypes.Node node)
@@ -118,13 +122,14 @@ public class CanvasImporter : ScriptedImporter
 		            return an;
 	            }else if (ext == ".canvas")
 	            {
-		            //if it's a canvas file, which we already should have handled, but this one hasn't been imported yet because we are importing multiple at the same time that reference each other. What order do they import in?..... wait how do we like, fix this bug properly? uhh
+		            //if it's a canvas file, which we already should have handled, but this one hasn't been imported yet? because we are importing multiple at the same time?? that reference each other??? What order do they import in?..... wait how do we like, fix this properly? uhh
 		            var cn = new CanvasNode(filePathAsProjectPath, n);
 		            cn.Asset = AssetDatabase.LoadAssetAtPath<CanvasObject>(filePathAsProjectPath);
+		            Debug.Log(filePathAsProjectPath);
 		            return cn;
 	            }
 	            //else...
-	            Debug.LogWarning($"Node Asset type (t:{mainType},ext:{ext}) is not handled. If this looks wrong, then I'm sorry. Ignoring node.");
+	            Debug.LogWarning($"Node Asset type (t:{mainType},ext:{ext}) is not handled. This is probably a bug. Ignoring node.");
 	            return null;
             }
             
@@ -210,8 +215,37 @@ public class CanvasImporter : ScriptedImporter
 	private string FromRelativeToProjectPath(string assetPath,string relPath)
 	{
 		//path is relative to the canvas, which is this.
-		var dir = Path.GetDirectoryName(assetPath) + "\\";
+		var dir = Path.GetDirectoryName(assetPath);
+		dir = dir.Substring(0, dir.LastIndexOf("\\", StringComparison.Ordinal)+1);
+		//This returns a path with mixed forward and back slashes, and unity ... doesn't seem to care too much?
+		//sorry if it ends up being important -_-
 		return dir + relPath;
+	}
+
+	private void UpdateGroupNodes(CanvasObject canvasObject)
+	{
+		foreach (var node in canvasObject.nodes)
+		{
+			if (node is GroupNode gn)
+			{
+				foreach (var leaf in canvasObject.nodes)
+				{
+					if (leaf != gn)
+					{
+						//Groups can contain groups as children nodes.
+						//so... look out for that.
+						
+						//Contains(Rect) is not a built-in function, see Extensions.cs
+						if (gn.Rect.Contains(leaf.Rect))
+						{
+							//Another example of the sort of shortcut I am taking by assuming things won't change at runtime.
+							gn.ChildrenNodes.Add(leaf);
+							leaf.Groups.Add(gn);
+						}
+					}
+				}
+			}
+		}
 	}
 
 }

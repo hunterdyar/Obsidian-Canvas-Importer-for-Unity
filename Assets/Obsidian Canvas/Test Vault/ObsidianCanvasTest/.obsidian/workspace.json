@@ -13,11 +13,11 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Demo/UI Panels/Test Conversation.canvas",
+                "file": "Test Canvases/Group Test Canvas.canvas",
                 "viewState": {
-                  "x": 190,
-                  "y": -180,
-                  "zoom": -0.288274071164537
+                  "x": -391.2579007145586,
+                  "y": 451.53720869816703,
+                  "zoom": -1.519562266378518
                 }
               }
             }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Demo/UI Panels/Test Conversation.canvas",
+                "file": "Test Canvases/Group Test Canvas.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Demo/UI Panels/Test Conversation.canvas",
+                "file": "Test Canvases/Group Test Canvas.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Demo/UI Panels/Test Conversation.canvas"
+                "file": "Test Canvases/Group Test Canvas.canvas"
               }
             }
           }
@@ -166,11 +166,14 @@
   },
   "active": "528442158cc9773b",
   "lastOpenFiles": [
-    "Test Canvases/Nesting Canvas B.canvas",
-    "Demo/UI Panels/Test Conversation.canvas",
     "Test Canvases/Text Items.canvas",
+    "Test Canvases/Nesting Canvas B.canvas",
+    "Regular Files/Canvas Object.asset.meta",
+    "Regular Files/Canvas Object.asset",
+    "Test Canvases/Nesting Canvas A.canvas",
     "Test Canvases/mdFile Items Test.canvas",
     "Test Canvases/Group Test Canvas.canvas",
+    "Demo/UI Panels/Test Conversation.canvas",
     "Test Canvases/Nesting Canvas A.canvas.meta",
     "Demo/UI Panels.meta",
     "Demo/UI Panels/Test Conversation.canvas.meta",
@@ -179,11 +182,8 @@
     "Demo.meta",
     "Test Canvases/Group Test Canvas.canvas.meta",
     "Test Canvases/Text Items.canvas.meta",
-    "Test Canvases.meta",
     "Regular Files/Hello There.md",
-    "Demo/UI Panels",
     "Regular Files/agent86.jpg",
-    "Test Canvases/Nesting Canvas A.canvas",
     "Text Items.json.canvas"
   ]
 }

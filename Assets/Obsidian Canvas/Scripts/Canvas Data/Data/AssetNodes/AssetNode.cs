@@ -7,6 +7,7 @@ namespace ObsidianCanvas.Data
 	public class AssetNode<T> : Node
 	{
 		public string FilePath;
+		[SerializeReference]
 		public T Asset;
 
 		public AssetNode(string filePath,Node node) : base(node)

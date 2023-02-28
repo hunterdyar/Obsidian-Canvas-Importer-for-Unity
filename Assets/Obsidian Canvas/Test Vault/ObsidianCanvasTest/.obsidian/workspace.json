@@ -166,6 +166,10 @@
   },
   "active": "528442158cc9773b",
   "lastOpenFiles": [
+    "Demo/Convo.meta",
+    "Demo/Convo/Test Conversation.canvas.meta",
+    "Demo/Convo/Test Conversation.canvas",
+    "Demo/Convo",
     "Test Canvases/Text Items.canvas",
     "Test Canvases/Nesting Canvas B.canvas",
     "Regular Files/Canvas Object.asset.meta",
@@ -180,8 +184,6 @@
     "Test Canvases/Nesting Canvas B.canvas.meta",
     "Test Canvases/mdFile Items Test.canvas.meta",
     "Demo.meta",
-    "Test Canvases/Group Test Canvas.canvas.meta",
-    "Test Canvases/Text Items.canvas.meta",
     "Regular Files/Hello There.md",
     "Regular Files/agent86.jpg",
     "Text Items.json.canvas"

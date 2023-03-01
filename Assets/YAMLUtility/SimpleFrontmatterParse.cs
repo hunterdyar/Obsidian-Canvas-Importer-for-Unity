@@ -27,7 +27,10 @@ namespace YAMLUtility
 				else
 				{
 					//i need a real YAML parser :(
-					//I think i can do it, but first lets figure out how the reflection works.
+					//I think i can do that, but first lets figure out how the reflection works.
+					//it's so silly to write a YAML parser because unity has UnityYAML built into it, its seemingly just not exposed.
+					//There's almost certainly a way to hack ourselves a yaml parser by serializing an asset then reading the file directly
+					//which is equally absurd.
 				}
 				
 				///
@@ -45,19 +48,34 @@ namespace YAMLUtility
 								field.SetValue(values, noQuotes);
 							}else if (field.FieldType == typeof(int))
 							{
-								field.SetValue(values, int.Parse(item.value));
+								if (int.TryParse(item.value, out int val))
+								{
+									field.SetValue(values, val);
+								}
 							}else if (field.FieldType == typeof(float))
 							{
-								field.SetValue(values,float.Parse(item.value));
+								if (float.TryParse(item.value, out var val))
+								{
+									field.SetValue(values, val);
+								}
 							}else if (field.FieldType == typeof(char))
 							{
-								field.SetValue(values,char.Parse(item.value));
+								if (char.TryParse(item.value, out var val))
+								{
+									field.SetValue(values, val);
+								}
 							}else if (field.FieldType == typeof(double))
 							{
-								field.SetValue(values,double.Parse(item.value));
+								if (double.TryParse(item.value, out var val))
+								{
+									field.SetValue(values, val);
+								}
 							}else if (field.FieldType == typeof(bool))
 							{
-								field.SetValue(values,bool.Parse(item.value));
+								if (Boolean.TryParse(item.value, out var val))
+								{
+									field.SetValue(values, val);
+								}
 							}
 						}
 					}

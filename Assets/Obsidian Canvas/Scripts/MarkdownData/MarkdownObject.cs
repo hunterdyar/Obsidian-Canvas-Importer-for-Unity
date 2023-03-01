@@ -35,12 +35,10 @@ namespace ObsidianCanvas.MarkdownData
 			ParseFrontmatter(frontType,front);
 			this.body = body;
 		}
-	}
 
-	[Serializable]
-	public class FrontmatterProperty
-	{
-		private string id;
-		private object value;
+		public T GetFrontmatter<T>() where T : IFrontmatter
+		{
+			return (T)frontmatter;
+		}
 	}
 }

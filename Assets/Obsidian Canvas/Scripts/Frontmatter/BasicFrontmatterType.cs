@@ -10,10 +10,6 @@ namespace ObsidianCanvas.Frontmatter
 		public int size;
 		public float amount;
 		public bool active;
-
-		public BasicFrontmatterType()
-		{
-			
-		}
+		
 	}
 }

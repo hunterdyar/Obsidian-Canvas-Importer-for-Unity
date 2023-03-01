@@ -12,6 +12,9 @@ using YAMLUtility;
 public class MarkdownImporter : ScriptedImporter
 {
 	private const string frontmatterDelim = "---";
+	//todo: this needs to not be empty by default
+	//but we don't know if there are any classes?
+	//so throw errors correctly and skip frontmatter until assigned
 	[SerializeField]
 	private string selectedTypeName;
 	public override void OnImportAsset(AssetImportContext ctx)

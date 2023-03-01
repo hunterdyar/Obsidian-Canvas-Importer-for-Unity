@@ -14,12 +14,19 @@ namespace YAMLUtility
 			//work through the symbols and identify keys and values, and create a list of keyvalues
 			//for each piece of parsed data, search T for a member that has the same name as the key
 			//attempt to parse value into the type of member.
-			int indentLevel = 0;
 			List<YAMLKeyValue> matter = new List<YAMLKeyValue>();
 			var lines = data.Split('\n');
 			foreach (var line in lines)
 			{
-				var elements = line.Split(':');
+				//Strip Comments
+				string l = line;
+				int comment = line.IndexOf('#');
+				if (comment != -1)
+				{
+					l = line.Substring(0, line.IndexOf('#'));
+				}
+				//Find keys and values
+				var elements = l.Split(':');
 				if (elements is { Length: 2 })
 				{
 					matter.Add(new YAMLKeyValue(elements[0],elements[1]));
@@ -42,6 +49,7 @@ namespace YAMLUtility
 					{
 						if (field.Name.ToLower() == item.key.ToLower())
 						{
+							//switch?
 							if (field.FieldType == typeof(string))
 							{
 								string noQuotes = (item.value[0] == '"' && item.value[^1] == '"') ? item.value.Substring(1, item.value.Length - 2) : item.value;
@@ -77,6 +85,24 @@ namespace YAMLUtility
 									field.SetValue(values, val);
 								}
 							}
+							else if (field.FieldType == typeof(byte))
+							{
+								if (byte.TryParse(item.value, out byte val))
+								{
+									field.SetValue(values, val);
+								}
+							}
+							//check if it an enum
+				
+							//sbyte
+							//decimal
+							//uint
+							//nint
+							//nuint
+							//ulong
+							//short
+							//ushort
+							//enums?
 						}
 					}
 				}
